@@ -1,7 +1,6 @@
 alias amend="git commit --amend --no-edit"
 alias st="git status"
 
-
 function checkin {
 	if [ ! -f $HOME/.lastcheckin ]; then
 		echo "pair=pairUnknown;ticket=0000;message=;" > $HOME/.lastcheckin
@@ -29,4 +28,3 @@ function checkin {
 
 	git commit -m  "${pair}: ${ticket} - ${message}"
 }
-

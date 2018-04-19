@@ -7,3 +7,5 @@ git config --global alias.c "commit"
 
 git config --global merge.tool kdiff3
 git config --global push.default simple
+
+git config --global core.excludesfile ~/workspaces/team-settings/.gitignore_global
