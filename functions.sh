@@ -4,6 +4,14 @@ pushd . > /dev/null 2>&1
 # general
 alias sls="source-latest-settings"
 
+function openc {
+	open ./coverage/lcov-report/index.html
+}
+
+function redo {
+	 rm -rf node_modules/; rm package-lock.json; npm i 
+}
+
 function moveToRepoRoot {
 	root_dir="$(git rev-parse --show-toplevel)"
 	if [ $? -ne 0 ]; then
