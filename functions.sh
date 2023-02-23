@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 pushd . > /dev/null 2>&1
 
 # general
@@ -9,7 +9,7 @@ function openc {
 }
 
 function redo {
-	 rm -rf node_modules/; rm package-lock.json; npm i 
+	 rm -rf node_modules/; rm package-lock.json; npm i
 }
 
 function moveToRepoRoot {
@@ -71,7 +71,7 @@ function checkin {
 }
 
 
-if [ "$PWD" == "$HOME" ]; then
+if [[ "$PWD" = "$HOME" ]]; then
 	cd "${WORKSPACES_ROOT}"
 else
 	popd > /dev/null 2>&1
